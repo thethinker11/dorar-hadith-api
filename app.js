@@ -10,6 +10,7 @@ const sharhSearchRouter = require('./routes/sharhSearch.routes');
 const mohdithSearchRouter = require('./routes/mohdithSearch.routes');
 const bookSearchRouter = require('./routes/bookSearch.routes');
 const dataRouter = require('./routes/data.routes');
+const mcpRouter = require('./mcp/mcp.routes');
 const config = require('./config/config');
 const errorHandler = require('./middleware/errorHandler');
 const AppError = require('./utils/AppError');
@@ -73,6 +74,9 @@ app.use('/v1', sharhSearchRouter);
 app.use('/v1', mohdithSearchRouter);
 app.use('/v1', bookSearchRouter);
 app.use('/v1', dataRouter);
+
+// Remote Model Context Protocol endpoint. Uses the same in-process Dorar services.
+app.use('/mcp', mcpRouter);
 
 // Serve Swagger UI
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));

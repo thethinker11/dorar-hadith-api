@@ -1,7 +1,7 @@
 {
-  "name": "hadith-api",
+  "name": "dorar-hadith-mcp",
   "version": "1.0.0",
-  "description": "hadith api based on dorar.net",
+  "description": "Combined Dorar.net Hadith API and stateless MCP server",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -34,7 +34,9 @@
     "puppeteer-core": "25.12.0",
     "swagger-ui-express": "^5.0.1",
     "undici": "^7.30.0",
-    "yamljs": "^0.3.0"
+    "yamljs": "^0.3.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "cross-env": "^10.1.0",
